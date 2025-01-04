@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees List</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .form-container { margin: 20px 0; padding: 20px; background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>Employees List</h1>
+    
+    <div class="form-container">
+        <h2>Add New Employee</h2>
+        <form action="/add" method="POST">
+            <p>
+                <label>Name: <input type="text" name="name" required></label>
+            </p>
+            <p>
+                <label>Role: <input type="text" name="role" required></label>
+            </p>
+            <p>
+                <button type="submit">Add Employee</button>
+            </p>
+        </form>
+    </div>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Role</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.role }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
