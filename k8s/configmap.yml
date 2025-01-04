@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  MYSQL_HOST: "mysql"
+  MYSQL_DATABASE: "employees_db"
+  MYSQL_USER: "user"
+  MYSQL_ROOT_HOST: "0.0.0.0"

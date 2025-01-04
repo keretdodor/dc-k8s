@@ -1,0 +1,26 @@
+# persistentvolumes.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-pv-0  # Changed name to match StatefulSet naming convention
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /mysql1
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-pv-1  # Changed name to match StatefulSet naming convention
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /mysql2
