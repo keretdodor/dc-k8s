@@ -124,7 +124,7 @@ MYSQL_ROOT_PASSWORD=password
 ## Continuous Deployment with ArgoCD
 
 ### Overview
-Our Employee Management System uses ArgoCD to implement GitOps-based continuous deployment. ArgoCD watches our Git repository and automatically synchronizes the Kubernetes cluster state to match our manifests, ensuring our deployment always matches our desired configuration in Git.
+My flask application uses ArgoCD to implement GitOps-based continuous deployment. ArgoCD watches our Git repository and automatically synchronizes the Kubernetes cluster state to match our manifests, ensuring our deployment always matches our desired configuration in Git.
 
 ### Installation and Access
 We installed ArgoCD in our cluster using the official manifests and exposed it through port forwarding:
