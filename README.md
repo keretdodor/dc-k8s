@@ -75,7 +75,7 @@ MYSQL_ROOT_PASSWORD=password
 
 ### Kubernetes Components
 
-![alt text](k8s-architucutre.png)
+![alt text](k8s-architucture.png)
 
 1. **ConfigMap** (`configmap.yml`)
    - Stores non-sensitive configuration
