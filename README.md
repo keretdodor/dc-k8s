@@ -45,7 +45,7 @@ The MySQL database stores employee information with the following schema:
 └── docker-compose.yml    # Local development setup
 ```
 
-## Development Setup (Docker Compose)
+## Docker Compose Setup 
 ### Environment Variables
 The application uses the following environment variables:
 ```
@@ -62,7 +62,7 @@ MYSQL_ROOT_PASSWORD=password
 3. Run: `docker-compose up --build`
 4. Access the application at: `http://localhost:5000`
 
-## Production Deployment (Kubernetes)
+## Kubernetes Deployment
 ### Kubernetes Components
 
 ![alt text](k8s-architucture.png)
