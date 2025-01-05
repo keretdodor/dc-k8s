@@ -120,9 +120,6 @@ MYSQL_ROOT_PASSWORD=password
    kubectl get nodes -o wide  # Get node IP
    ```
    Access the application at: `http://<node-ip>:30000`
-# Employee Management System
-
-[Previous sections remain unchanged until the new section]
 
 ## Continuous Deployment with ArgoCD
 
