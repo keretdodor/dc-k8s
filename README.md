@@ -46,11 +46,6 @@ The MySQL database stores employee information with the following schema:
 ```
 
 ## Development Setup (Docker Compose)
-
-### Prerequisites
-- Docker
-- Docker Compose
-
 ### Environment Variables
 The application uses the following environment variables:
 ```
@@ -68,11 +63,6 @@ MYSQL_ROOT_PASSWORD=password
 4. Access the application at: `http://localhost:5000`
 
 ## Production Deployment (Kubernetes)
-
-### Prerequisites
-- Kubernetes cluster
-- kubectl configured to access your cluster
-
 ### Kubernetes Components
 
 ![alt text](k8s-architucture.png)
