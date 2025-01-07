@@ -35,10 +35,10 @@ def health_check():
 def index():
     try:
         conn = get_db_connection()
-        cursor = conn.cursor(dictionary=True)
+        cursor = conn.cursor(dictionary=True) #instead of a tuple uses dictionary. easier to maintain adn read
         cursor.execute('SELECT * FROM employees')
-        employees = cursor.fetchall()
-        cursor.close()
+        employees = cursor.fetchall() # prepares the table
+        cursor.close() # closes the interactive cursor
         conn.close()
         return render_template('index.html', employees=employees)
     except Exception as e:
@@ -48,15 +48,15 @@ def index():
 def add_employee():
     try:
         name = request.form['name']
-        role = request.form['role']
+        role = request.form['role'] # extract the form data submitted by the user from the POST request.
         
         conn = get_db_connection()
         cursor = conn.cursor()
-        cursor.execute('INSERT INTO employees (name, role) VALUES (%s, %s)', (name, role))
-        conn.commit()
+        cursor.execute('INSERT INTO employees (name, role) VALUES (%s, %s)', (name, role)) # inserting and sanitizing inputs
+        conn.commit() # making inserting permanent
         cursor.close()
         conn.close()
-        return redirect(url_for('index'))
+        return redirect(url_for('index')) # redirecting client back to /
     except Exception as e:
         return f"Error adding employee: {str(e)}", 500
 
