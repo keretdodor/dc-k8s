@@ -1,8 +1,8 @@
-# persistentvolumes.yaml
+
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mysql-pv-0  # Changed name to match StatefulSet naming convention
+  name: mysql-pv-0  
 spec:
   accessModes:
     - ReadWriteOnce
@@ -15,7 +15,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mysql-pv-1  # Changed name to match StatefulSet naming convention
+  name: mysql-pv-1  
 spec:
   accessModes:
     - ReadWriteOnce
